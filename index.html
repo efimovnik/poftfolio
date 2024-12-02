@@ -4,8 +4,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Create a Mouse Tracking Glow Effect with Tailwind CSS</title>
+  <title>Portfolio</title>
 </head>
+
+<header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+  <div>
+    <h1 class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+      <a href="/">Nik Efimov</a>
+    </h1>
+    <h2 class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">Software Engineer In Test</h2>
+    <p class="mt-4 max-w-xs leading-normal">I build scalable, automated testing solutions for modern applications, enabling faster and reliable software releases.</p>
+    <nav class="nav hidden lg:block" aria-label="In-page jump links">
+      <ul class="mt-16 w-max">
+        <li>
+          <a class="group flex items-center py-3 active" href="#about">
+            <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
+            <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">About</span>
+          </a>
+        </li>
+        <li>
+          <a class="group flex items-center py-3 " href="#experience">
+            <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
+            <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Experience</span>
+          </a>
+        </li>
+        <li>
+          <a class="group flex items-center py-3 " href="#projects">
+            <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
+            <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Projects</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <ul class="ml-1 mt-8 flex items-center" aria-label="Social media">
+    <!-- GitHub Icon -->
+    <li class="mr-5 shrink-0 text-xs">
+      <a class="block hover:text-slate-200" href="https://github.com/efimovnik" target="_blank" rel="noreferrer noopener" aria-label="GitHub (opens in a new tab)" title="GitHub">
+        <span class="sr-only">GitHub</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-6 w-6" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+        </svg>
+      </a>
+    </li>
+    <!-- LinkedIn Icon -->
+    <li class="mr-5 shrink-0 text-xs">
+      <a class="block hover:text-slate-200" href="https://www.linkedin.com/in/nik-efimov/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn (opens in a new tab)" title="LinkedIn">
+        <span class="sr-only">LinkedIn</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6" aria-hidden="true">
+          <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+        </svg>
+      </a>
+    </li>
+    <!-- LeetCode Icon -->
+    <li class="mr-5 shrink-0 text-xs">
+      <a class="block hover:text-slate-200" href="https://leetcode.com/u/kolya_efimov/" target="_blank" rel="noreferrer noopener" aria-label="LeetCode (opens in a new tab)" title="LeetCode">
+        <span class="sr-only">LeetCode</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="h-6 w-6" aria-hidden="true">
+          <path d="M21.469 23.907l-3.595 3.473c-0.624 0.625-1.484 0.885-2.432 0.885s-1.807-0.26-2.432-0.885l-5.776-5.812c-0.62-0.625-0.937-1.537-0.937-2.485 0-0.952 0.317-1.812 0.937-2.432l5.76-5.844c0.62-0.619 1.5-0.859 2.448-0.859s1.808 0.26 2.432 0.885l3.595 3.473c0.687 0.688 1.823 0.663 2.536-0.052 0.708-0.713 0.735-1.848 0.047-2.536l-3.473-3.511c-0.901-0.891-2.032-1.505-3.261-1.787l3.287-3.333c0.688-0.687 0.667-1.823-0.047-2.536s-1.849-0.735-2.536-0.052l-13.469 13.469c-1.307 1.312-1.989 3.113-1.989 5.113 0 1.996 0.683 3.86 1.989 5.168l5.797 5.812c1.307 1.307 3.115 1.937 5.115 1.937 1.995 0 3.801-0.683 5.109-1.989l3.479-3.521c0.688-0.683 0.661-1.817-0.052-2.531s-1.849-0.74-2.531-0.052zM27.749 17.349h-13.531c-0.932 0-1.692 0.801-1.692 1.791 0 0.991 0.76 1.797 1.692 1.797h13.531c0.933 0 1.693-0.807 1.693-1.797 0-0.989-0.76-1.791-1.693-1.791z" />
+          </path>
+        </svg>
+      </a>
+    </li>
+  </ul>undefined
+</header>
+
 
 <body class="bg-zinc-950 text-zinc-50 antialiased h-screen">
   <div class="max-w-3xl mx-auto px-4 space-y-12 pb-32 pt-16 mt-10 mb-24">
@@ -13,18 +76,35 @@
     <div class="relative glow-capture">
       <div
         class="group bg-zinc-900/50 border-4 border-white/5 rounded-2xl p-10 shadow-lg shadow-black/80 flex md:flex-row flex-col flex-wrap md:items-start items-center md:justify-between justify-center gap-6 backdrop-blur-md glow glow:ring-1 glow:border-glow glow:ring-glow glow:bg-glow/[.15]">
-        <div class="flex-1 md:order-1 order-2">
-          <p class="opacity-50">Tropical fish</p>
-          <h2 class="font-bold text-4xl tracking-tighter mb-3 glow:text-glow/[.15]">Banana Wrasse</h2>
-          <div class="md:prose-base prose-lg prose-zinc prose-invert text-opacity-90">
-            <p>The Banana Wrasse is known for its vibrant yellow color and elongated body, resembling a banana.</p>
-            <p>This active and playful fish thrives in tropical reef environments, often seen darting among corals and
-              rocks.</p>
-          </div>
-
-          <button
-            class="font-semibold px-6 bg-zinc-950/50 backdrop-blur-md py-3 rounded-xl text-white/90 border-2 border-white/10 mt-6 glow:ring-1 glow:border-glow glow:ring-glow">Learn
-            more</button>
+        <div class="md:prose-base prose-lg prose-zinc prose-invert text-opacity-90">
+          <p class="text-[#909cb7]">
+            I am a SDET with over 8 years of experience in building and optimizing end-to-end test infrastructures for UI, API, and complex backend workflows of 
+            <a 
+              class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" 
+              href="https://www.cma.se" 
+              target="_blank" 
+              rel="noreferrer noopener" 
+              aria-label="CMA (opens in a new tab)">
+              payment systems</a>,
+              <a 
+              class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" 
+              href="https://www.publix.com" 
+              target="_blank" 
+              rel="noreferrer noopener" 
+              aria-label="Publix (opens in a new tab)">
+              retail</a>,
+              
+              
+            client-server, and 
+            <a 
+              class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" 
+              href="https://www.nuorder.com" 
+              target="_blank" 
+              rel="noreferrer noopener" 
+              aria-label="Publix (opens in a new tab)">
+              web-based</a>
+            applications. Implemented scalable automation solutions across 10 projects from scratch and integrated them into CI/CD pipelines, achieving up to 70% coverage and saving over 2,000 hours of manual testing time annually.
+          </p>
         </div>
 
         <img src="fish-1.jpg" alt="Banana Wrasse"
@@ -77,18 +157,13 @@
               with elegance.</p>
           </div>
           <button
-            class="font-semibold px-6 bg-zinc-950/50 backdrop-blur-md py-3 rounded-xl text-white/90 border-2 border-white/10 mt-6 glow:ring-1 glow:border-glow glow:ring-glow">Learn
-            more</button>
+            class="font-semibold px-6 bg-zinc-950/50 backdrop-blur-md py-3 rounded-xl text-white/90 border-2 border-white/10 mt-6 glow:ring-1 glow:border-glow glow:ring-glow">View Full Résumé</button>
         </div>
 
         <img src="fish-3.jpg" alt="Banana Wrasse"
           class="max-w-sm rounded-full object-cover w-40 h-40 border-4 border-white/5 md:order-2 order-1 glow glow:ring-1 glow:border-glow/[.5] glow:ring-glow shadow-inner" />
       </div>
       <div class="glow-overlay" style="--glow-color: #0ea5e9"></div>
-    </div>
-
-    <div class="text-sm text-white/60 text-center">
-      <a href="https://webcrunch.com" target="_blank">webcrunch.com</a>
     </div>
   </div>
 
