@@ -5,7 +5,7 @@
         "source": "/portfolio",
         "destination": "https://nik-efimov-3ce5f.web.app",
         "type": 301
-      }
+      }],
     "public": "dist",
     "ignore": [
       "firebase.json",
