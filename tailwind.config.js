@@ -4,25 +4,24 @@ import plugin from "tailwindcss/plugin";
 import typography from "@tailwindcss/typography";
 
 export default {
-  content: ["index.html"],
+  content: [
+    "./index.html", // Include the main HTML file
+    "./src/**/*.{js,ts,jsx,tsx}", // Include all source files
+  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // Extend your theme with glow color if used
+        glow: "color-mix(in srgb, var(--glow-color) calc(<alpha-value> * 100%), transparent)",
+      },
+    },
   },
   plugins: [
-  plugin(
-    function ({ addVariant }) {
-      addVariant("glow", ".glow-capture .glow-overlay &")
-    },
-    {
-      theme: {
-        extend: {
-          colors: {
-            // https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix
-            glow: "color-mix(in srgb, var(--glow-color) calc(<alpha-value> * 100%), transparent)",
-          },
-        },
-      },
-    }
-  ),
-],
-}
+    typography, // Include the typography plugin if used
+    plugin(
+      function ({ addVariant }) {
+        addVariant("glow", ".glow-capture .glow-overlay &");
+      }
+    ),
+  ],
+};
