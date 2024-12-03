@@ -22,3 +22,7 @@ body {
   transition: 400ms mask ease;
   will-change: mask;
 }
+
+.nav-indicator.active {
+  @apply text-teal-300 font-bold border-b-2 border-teal-300;
+}
