@@ -9,8 +9,11 @@ body {
 .glow-overlay {
   --glow-size: 25rem;
 
-  position: absolute;
-  inset: 0;
+  position: fixed; /* Fixed positioning for full-page coverage */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
   pointer-events: none;
   user-select: none;
   opacity: var(--glow-opacity, 0);
@@ -19,8 +22,8 @@ body {
     var(--glow-color) 1%,
     transparent 50%
   );
-  transition: 400ms mask ease;
-  will-change: mask;
+  transition: 400ms mask ease, 400ms opacity ease;
+  will-change: mask, opacity;
 }
 
 .nav-indicator.active {

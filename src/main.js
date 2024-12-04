@@ -1,7 +1,7 @@
 import "./style.css"
 
 document.addEventListener("DOMContentLoaded", () => {
-  const captures = document.querySelectorAll(".glow-capture")
+  const glowEffect = document.getElementById("glow-effect");
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav a');
 
@@ -24,29 +24,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, observerOptions);
 
+  if (!glowEffect) {
+    console.error("Glow effect element not found!");
+    return;
+  }
+
+  document.addEventListener("mousemove", (event) => {
+    // Calculate mouse position relative to the entire page
+    const x = event.clientX + window.scrollX;
+    const y = event.clientY + window.scrollY;
+
+    // Update the radial gradient's position
+    glowEffect.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
+  });
+
+  document.addEventListener("mouseleave", () => {
+    // Optionally fade the glow back to the center
+    glowEffect.style.background = `radial-gradient(600px at 50% 50%, rgba(29, 78, 216, 0.15), transparent 80%)`;
+  });
+
   sections.forEach((section) => observer.observe(section));
 
 
-  captures.forEach((capture) => {
-    // Clone a child element. For example, we can clone the first child.
-    const clonedChild = capture.children[0].cloneNode(true)
-    const overlay = capture.querySelector(".glow-overlay")
-
-    // Append the cloned child to the overlay.
-    overlay.appendChild(clonedChild)
-
-    capture.addEventListener("mousemove", (event) => {
-      const x = event.pageX - capture.offsetLeft
-      const y = event.pageY - capture.offsetTop
-
-      overlay.style.setProperty("--glow-x", `${x}px`)
-      overlay.style.setProperty("--glow-y", `${y}px`)
-      overlay.style.setProperty("--glow-opacity", "1")
-    })
-
-    // Add mouseleave event to remove the glow effect
-    capture.addEventListener("mouseleave", () => {
-      overlay.style.setProperty("--glow-opacity", "0")
-    })
-  })
-})
+  
+});
