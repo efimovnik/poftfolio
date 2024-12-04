@@ -3,7 +3,7 @@ Deployed to https://efimovnik.github.io/portfolio/
 
 ## 🛠 Installation & Set Up
 
-1. Install the Gatsby CLI
+1. Create vite project
 
    ```sh
    npm create vite@latest portfolio -- --template Vanilla
